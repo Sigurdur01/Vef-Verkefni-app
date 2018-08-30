@@ -1,5 +1,8 @@
 #Sigurður Ingi Brynjarsson
-from bottle import route, run, template
+
+from sys import argv
+from bottle import *
+bottle.debug(True)
 
 @route('/')
 def index():
@@ -24,4 +27,4 @@ def jobbi():
     return "future page here"
 
 
-run(host='0.0.0.0', port=argv[1], debug=True)
+bottle.run(host='0.0.0.0', port=argv[1])
