@@ -1,1 +1,1 @@
-web: python ./Verk1.py $PORT
+web: python ./verk1.py $PORT
