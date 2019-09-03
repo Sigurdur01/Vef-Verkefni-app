@@ -22,7 +22,7 @@ contents = {
                 "href3":hrefs["href sida3"]
 		}
 sida2contents = {
-                "content":"Þetta er Sida 2",
+                "content":"detta er Sida 2",
 		"Hlekur1":linktext["Heim"],
                 "Hlekur2":linktext["Hlekur2"],
                 "Hlekur3":linktext["Hlekur3"],
@@ -31,7 +31,7 @@ sida2contents = {
                 "href3":hrefs["href sida3"]
                }
 sida3contents = {
-                "content":"Þetta er Sida 3",
+                "content":"detta er Sida 3",
 		"Hlekur1":linktext["Heim"],
                 "Hlekur2":linktext["Hlekur2"],
                 "Hlekur3":linktext["Hlekur3"],
