@@ -1,33 +1,65 @@
 #Sigurður Ingi Brynjarsson
 
+from flask import Flask,render_template,redirect
 from sys import argv
 
-import bottle
-from bottle import *
+app = Flask(__name__)
 
-bottle.debug(True)
+hrefs = {
+            "href main":"/",
+            "href sida2":"/sidur/2",
+            "href sida3":"/sidur/3"
+        }
 
-@route('/')
+linktext = {
+                "Hlekur1":"Heim",
+                "Hlekur2":"Sida2",
+                "Hlekur3":"Sida3"
+            }
+
+contents = {
+                "content":"Hello Universe",
+			    "Hlekur1":linktext["Heim"],
+                "Hlekur2":linktext["Hlekur2"],
+                "Hlekur3":linktext["Hlekur3"],
+			    "href1":hrefs["href main"],
+                "href2":hrefs["href sida2"],
+                "href3":hrefs["href sida3"]
+			}
+
+pg2contents = {
+                "content":"Þetta er Sida 2",
+			    "Hlekur1":linktext["Heim"],
+                "Hlekur2":linktext["Hlekur2"],
+                "Hlekur3":linktext["Hlekur3"],
+			    "href1":hrefs["href main"],
+                "href2":hrefs["href sida2"],
+                "href3":hrefs["href sida3"]
+               }
+
+pg3contents = {
+                "content":"This is page3",
+			    "Hlekur1":linktext["Heim"],
+                "Hlekur2":linktext["Hlekur2"],
+                "Hlekur3":linktext["Hlekur3"],
+			    "href1":hrefs["href main"],
+                "href2":hrefs["href sida2"],
+                "href3":hrefs["href sida3"]
+               }
+
+@app.route("/")
 def index():
-    return"""
-    <h1>Verkefni 1</h1>
-    <p><a href='/about'>About page</a></p>
-    <p><a href='/bio'>Bio page</a></p>
-    <p><a href='/future'>Future page</a></p>
-    """
+    return render_template('head.html', cnt=contents)
 
 
-@route("/about")
-def jobbi():
-    return "about page here"
+@app.route("/sidur/<int:pgnumber>", methods=['Get'])
+def page(pgnumber):
+    if pgnumber == 1:
+        return redirect("/")
+    elif pgnumber == 2:
+        return render_template('head.html', cnt=pg2contents)
+    elif pgnumber == 3:
+        return render_template('head.html', cnt=pg3contents)
 
-@route("/bio")
-def jobbi():
-    return "bio page here"
-
-@route("/future")
-def jobbi():
-    return "future page here"
-
-
-bottle.run(host='0.0.0.0', port=argv[1])
+if (__name__) == '__main__':
+    app.run(debug=True)
