@@ -19,30 +19,30 @@ linktext = {
 
 contents = {
                 "content":"Hello Universe",
-			    "Hlekur1":linktext["Heim"],
+		"Hlekur1":linktext["Heim"],
                 "Hlekur2":linktext["Hlekur2"],
                 "Hlekur3":linktext["Hlekur3"],
-			    "href1":hrefs["href main"],
+		"href1":hrefs["href main"],
                 "href2":hrefs["href sida2"],
                 "href3":hrefs["href sida3"]
 			}
 
 pg2contents = {
                 "content":"Þetta er Sida 2",
-			    "Hlekur1":linktext["Heim"],
+		"Hlekur1":linktext["Heim"],
                 "Hlekur2":linktext["Hlekur2"],
                 "Hlekur3":linktext["Hlekur3"],
-			    "href1":hrefs["href main"],
+		"href1":hrefs["href main"],
                 "href2":hrefs["href sida2"],
                 "href3":hrefs["href sida3"]
                }
 
 pg3contents = {
                 "content":"This is page3",
-			    "Hlekur1":linktext["Heim"],
+		"Hlekur1":linktext["Heim"],
                 "Hlekur2":linktext["Hlekur2"],
                 "Hlekur3":linktext["Hlekur3"],
-			    "href1":hrefs["href main"],
+		"href1":hrefs["href main"],
                 "href2":hrefs["href sida2"],
                 "href3":hrefs["href sida3"]
                }
