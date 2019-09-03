@@ -38,7 +38,7 @@ pg2contents = {
                }
 
 pg3contents = {
-                "content":"This is page3",
+                "content":"Þetta er Sida 3",
 		"Hlekur1":linktext["Heim"],
                 "Hlekur2":linktext["Hlekur2"],
                 "Hlekur3":linktext["Hlekur3"],
