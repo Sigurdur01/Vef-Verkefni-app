@@ -1,1 +1,1 @@
-web: python ./verk1.py $PORT
+web: gunicorn app:app
