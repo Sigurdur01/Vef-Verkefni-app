@@ -25,7 +25,7 @@ contents = {
 		"href1":hrefs["href main"],
                 "href2":hrefs["href sida2"],
                 "href3":hrefs["href sida3"]
-			}
+		}
 
 pg2contents = {
                 "content":"Þetta er Sida 2",
