@@ -43,7 +43,7 @@ sida3contents = {
 @app.route("/")
 def index():
     return render_template('head.html', cnt=contents)
-@app.route("/sidur/<int:sidunumber>", methods=['Get'])
+@app.route("/sidur/<int:sidunumber>", methods=['Get', 'POST'])
 def sida(sidunumber):
     if sidunumber == 1:
         return redirect("/")
